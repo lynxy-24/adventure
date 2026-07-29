@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oleron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111111;
+    --paper:#ffffff;
+    --line:#dddddd;
+    --meta:#707070;
+    --accent:#6f5cad;
+  }
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Comfortaa", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  body{
+    text-transform:lowercase;
+  }
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:64px 24px 120px;
+  }
+
+  a.back{
+    font-size:12px;
+    font-weight:500;
+    color:var(--meta);
+    text-decoration:none;
+    display:inline-block;
+    margin-bottom:32px;
+  }
+  a.back:hover{ color:var(--accent); }
+
+  header{
+    margin-bottom:64px;
+  }
+  header .kicker{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.08em;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  header h1{
+    font-weight:700;
+    font-size:34px;
+    line-height:1.2;
+    margin:0 0 14px;
+  }
+  header p{
+    font-size:15px;
+    font-weight:400;
+    line-height:1.6;
+    color:var(--meta);
+    max-width:46ch;
+    margin:0;
+  }
+  nav{
+    margin-top:28px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  nav a{
+    font-size:12px;
+    font-weight:500;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+  nav a:hover{
+    color:var(--accent);
+    border-color:var(--accent);
+  }
+
+  .entry{
+    padding:40px 0;
+    border-top:1px solid var(--line);
+  }
+  .entry:first-of-type{
+    border-top:1px solid var(--ink);
+  }
+  .entry-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .entry-num{
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    min-width:22px;
+  }
+  .entry h2{
+    font-size:20px;
+    font-weight:600;
+    margin:0;
+  }
+  .entry .date{
+    font-size:12px;
+    font-weight:500;
+    color:var(--accent);
+    margin:0 0 18px 36px;
+  }
+  .entry p{
+    font-size:15px;
+    font-weight:400;
+    line-height:1.7;
+    margin:0 0 20px;
+    max-width:56ch;
+  }
+
+  .photos{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:8px;
+    margin-top:8px;
+  }
+  .photo{
+    aspect-ratio:4/3;
+    border:1px dashed var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:500;
+    color:var(--meta);
+    text-align:center;
+    padding:6px;
+  }
+  @media (max-width:480px){
+    .photos{ grid-template-columns:repeat(2, 1fr); }
+    .entry .date{ margin-left:0; }
+    .entry-head{ flex-direction:column; gap:2px; }
+  }
+
+  footer{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:12px;
+    font-weight:500;
+    color:var(--meta);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="../index.html">&larr; all trips</a>
+
+  <header>
+    <div class="kicker">a small journal</div>
+    <h1>oleron</h1>
+    <p>eighteen july to the first of august — two weeks on the island, day by day.</p>
+    <nav>
+      <a href="#day-1">18 jul</a>
+      <a href="#day-2">19 jul</a>
+      <a href="#day-3">20 jul</a>
+      <a href="#day-4">21 jul</a>
+      <a href="#day-5">22 jul</a>
+      <a href="#day-6">23 jul</a>
+      <a href="#day-7">24 jul</a>
+      <a href="#day-8">25 jul</a>
+      <a href="#day-9">26 jul</a>
+      <a href="#day-10">27 jul</a>
+      <a href="#day-11">28 jul</a>
+      <a href="#day-12">29 jul</a>
+      <a href="#day-13">30 jul</a>
+      <a href="#day-14">31 jul</a>
+      <a href="#day-15">1 aug</a>
+    </nav>
+  </header>
+
+  <section class="entry" id="day-1">
+    <div class="entry-head"><span class="entry-num">01</span><h2>arriving</h2></div>
+    <div class="date">18 july</div>
+    <p>write about getting there, the first look at the island, wherever you end up staying.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-2">
+    <div class="entry-head"><span class="entry-num">02</span><h2>settling in</h2></div>
+    <div class="date">19 july</div>
+    <p>write about the first full day, exploring nearby, getting a feel for the place.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-3">
+    <div class="entry-head"><span class="entry-num">03</span><h2>beaches</h2></div>
+    <div class="date">20 july</div>
+    <p>write about a day at the beach, the water, the light.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-4">
+    <div class="entry-head"><span class="entry-num">04</span><h2>villages</h2></div>
+    <div class="date">21 july</div>
+    <p>write about wandering through one of the island's villages, the colourful shutters, the market.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-5">
+    <div class="entry-head"><span class="entry-num">05</span><h2>by bike</h2></div>
+    <div class="date">22 july</div>
+    <p>write about a bike ride along the coast, the salt marshes, the oyster huts.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-6">
+    <div class="entry-head"><span class="entry-num">06</span><h2>slow day</h2></div>
+    <div class="date">23 july</div>
+    <p>write about a quiet day, nothing planned, whatever happened anyway.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-7">
+    <div class="entry-head"><span class="entry-num">07</span><h2>halfway</h2></div>
+    <div class="date">24 july</div>
+    <p>write about a week in, how the trip feels so far.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-8">
+    <div class="entry-head"><span class="entry-num">08</span><h2>the coast</h2></div>
+    <div class="date">25 july</div>
+    <p>write about the lighthouse, the cliffs, or wherever the coastline took you today.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-9">
+    <div class="entry-head"><span class="entry-num">09</span><h2>oysters</h2></div>
+    <div class="date">26 july</div>
+    <p>write about the food, the seafood, a meal worth remembering.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-10">
+    <div class="entry-head"><span class="entry-num">10</span><h2>further out</h2></div>
+    <div class="date">27 july</div>
+    <p>write about a trip further along the island, or off it, whatever the day held.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-11">
+    <div class="entry-head"><span class="entry-num">11</span><h2>routine</h2></div>
+    <div class="date">28 july</div>
+    <p>write about how the days have settled into a rhythm by now.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-12">
+    <div class="entry-head"><span class="entry-num">12</span><h2>sunset</h2></div>
+    <div class="date">29 july</div>
+    <p>write about an evening on the island, the light, the end of the day.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-13">
+    <div class="entry-head"><span class="entry-num">13</span><h2>almost there</h2></div>
+    <div class="date">30 july</div>
+    <p>write about the trip winding down, what's left on the list.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-14">
+    <div class="entry-head"><span class="entry-num">14</span><h2>last full day</h2></div>
+    <div class="date">31 july</div>
+    <p>write about making the most of the last full day on the island.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <section class="entry" id="day-15">
+    <div class="entry-head"><span class="entry-num">15</span><h2>leaving</h2></div>
+    <div class="date">1 august</div>
+    <p>write about packing up, the trip back, what you'll remember most.</p>
+    <div class="photos"><div class="photo">photo 1</div><div class="photo">photo 2</div><div class="photo">photo 3</div></div>
+  </section>
+
+  <footer>
+    written by daphne
+  </footer>
+
+</div>
+</body>
+</html>
