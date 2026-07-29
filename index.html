@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>daphne's travel journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111111;
+    --paper:#ffffff;
+    --line:#dddddd;
+    --meta:#707070;
+    --accent:#6f5cad;
+  }
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Comfortaa", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  body{
+    text-transform:lowercase;
+  }
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:64px 24px 120px;
+  }
+
+  header{
+    margin-bottom:56px;
+  }
+  header .kicker{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.08em;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  header h1{
+    font-weight:700;
+    font-size:32px;
+    line-height:1.25;
+    margin:0 0 14px;
+  }
+  header p{
+    font-size:15px;
+    font-weight:400;
+    line-height:1.6;
+    color:var(--meta);
+    max-width:46ch;
+    margin:0;
+  }
+
+  .trips{
+    border-top:1px solid var(--ink);
+  }
+  .trip{
+    display:block;
+    text-decoration:none;
+    color:var(--ink);
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .trip:hover .trip-name{
+    color:var(--accent);
+  }
+  .trip-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .trip-name{
+    font-size:19px;
+    font-weight:600;
+  }
+  .trip-dates{
+    font-size:12px;
+    font-weight:500;
+    color:var(--accent);
+    white-space:nowrap;
+  }
+  .trip-desc{
+    font-size:14px;
+    font-weight:400;
+    color:var(--meta);
+    margin-top:6px;
+    max-width:50ch;
+  }
+
+  .trip.upcoming{
+    opacity:0.45;
+    cursor:default;
+  }
+  .trip.upcoming .trip-name{
+    color:var(--ink);
+  }
+
+  .more-note{
+    margin-top:32px;
+    font-size:13px;
+    font-weight:400;
+    color:var(--meta);
+    font-style:italic;
+  }
+
+  footer{
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:12px;
+    font-weight:500;
+    color:var(--meta);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">a small journal</div>
+    <h1>daphne's travel journal</h1>
+    <p>a collection of trips, written down as they happen — one page per adventure.</p>
+  </header>
+
+  <div class="trips">
+    <a class="trip" href="verona/index.html">
+      <div class="trip-row">
+        <span class="trip-name">verona</span>
+        <span class="trip-dates">1 sep - 6 sep</span>
+      </div>
+      <div class="trip-desc">a few days in verona with friends — piazzas, gelato, and getting a little lost together.</div>
+    </a>
+
+    <a class="trip" href="oleron/index.html">
+      <div class="trip-row">
+        <span class="trip-name">oleron</span>
+        <span class="trip-dates">18 jul - 1 aug</span>
+      </div>
+      <div class="trip-desc">two weeks on the island — beaches, villages, and oysters.</div>
+    </a>
+  </div>
+
+  <p class="more-note">other adventures to come soon.</p>
+
+  <footer>
+    written by daphne
+  </footer>
+
+</div>
+</body>
+</html>
